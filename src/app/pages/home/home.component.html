@@ -1,0 +1,61 @@
+<div class="banner">
+  <div class="content">
+    <h1>Fresh Icecreams</h1>
+
+    <button mat-raised-button routerLink="menu">ORDER NOW <mat-icon>arrow_forward</mat-icon></button>
+
+  </div>
+</div>
+
+<div class="wrapper">
+
+  <h1>How to get <span class="highlight">fresh Icecreams</span></h1>
+
+  <!-- step box-->
+  <div class="steps" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <div fxFlex="30%" fxFlex.xs="100%">
+
+      <div class="stepBox">
+        <h2>1</h2>
+        <p>Select the Icecream </p>
+      </div>
+
+
+    </div>
+    <div fxFlex="30%" fxFlex.xs="100%">
+
+      <div class="stepBox">
+        <h2>2</h2>
+        <p>Fill the details </p>
+      </div>
+
+    </div>
+    <div fxFlex="30%" fxFlex.xs="100%">
+
+      <div class="stepBox">
+        <h2>3</h2>
+        <p>Your order delivered in minute </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- foodbox  -->
+  <h1 class="text-center">Customers <span class="highlight">Favourites Icecreams</span></h1>
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" fxLayoutGap="3px">
+    <div fxFlex="23%" fxFlex.xs="100%" *ngFor="let fd of foodData;index as i">
+        <div class="foodbox" *ngIf="i<=3">
+          <img src="{{fd.foodImg}}" />
+          <h3>{{fd.foodName}}</h3>
+          <p>{{fd.foodPrice | currency:'INR'}}</p>
+        </div>
+    </div>
+  </div>
+
+  <button mat-raised-button routerLink="menu" color="accent" class="btn-view-more">view more</button>
+ 
+
+</div>

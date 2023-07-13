@@ -1,0 +1,18 @@
+.navbar-brand {
+    padding: 5px 0;
+}
+.navbar-brand a{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+.navbar{
+    background-color: #ffd740;
+    text-align: center;
+    min-height: 60px;
+}
+
+@media screen and (max-width:300px) {
+}

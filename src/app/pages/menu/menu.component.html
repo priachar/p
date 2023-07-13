@@ -1,0 +1,15 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around top" fxLayoutGap="3px">
+    <div fxFlex="23%" fxFlex.xs="100%" *ngFor="let fd of foodData;index as i">
+        <div class="foodbox" >
+          <img src="{{fd.foodImg}}" />
+          <h3>{{fd.foodName}}</h3>
+          <p>{{fd.foodDetails}}</p>
+          <p>{{fd.foodPrice | currency:'INR'}}</p>
+          <a mat-raised-button  color="warn" [routerLink]="['/menu',fd.id]">Buy Now <mat-icon>shopping_bag</mat-icon></a>
+        
+        </div>
+        
+    </div>
+
+</div>
+
